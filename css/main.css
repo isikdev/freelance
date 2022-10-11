@@ -1,0 +1,89 @@
+.form__input {
+  outline: none;
+  border: 0px none;
+}
+.form__input:hover {
+  outline: none;
+}
+
+.purple {
+  background-color: #8c39cd;
+}
+
+.font-style-italic {
+  font-style: italic;
+}
+
+.c-purple {
+  color: #8c39cd;
+}
+
+.c-grey {
+  color: #909090;
+}
+
+.br-right-2 {
+  border-right: 2px solid #8c39cd;
+}
+
+.mw-20 {
+  max-width: 20%;
+}
+
+.mw-30 {
+  max-width: 30%;
+}
+
+.mw-70 {
+  max-width: 70%;
+}
+
+.mw-90 {
+  max-width: 90%;
+}
+
+.w-60 {
+  width: 60%;
+}
+
+.mx {
+  margin: 0px auto !important;
+}
+
+.mt-5 {
+  margin: 5px 5px;
+}
+
+.mt-20 {
+  margin: 20px 0px;
+}
+
+.img__banner {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.info__banner {
+  background-image: url("../img/banner.svg");
+}
+
+.register__banner {
+  background-image: url("../img/register-banner.svg");
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.bsh-pr {
+  box-shadow: -2px 0px 9px 0px rgba(63, 5, 64, 0.2509803922);
+}/*# sourceMappingURL=main.css.map */

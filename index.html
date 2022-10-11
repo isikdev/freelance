@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freelance</title>
+    <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+        .custom-checkbox {
+            position: absolute;
+            z-index: -1;
+            opacity: 0;
+        }
+        
+        .custom-checkbox+label {
+            display: inline-flex;
+            align-items: center;
+            user-select: none;
+        }
+        
+        .custom-checkbox+label::before {
+            content: '';
+            display: inline-block;
+            width: 1em;
+            height: 1em;
+            flex-shrink: 0;
+            flex-grow: 0;
+            border: 1px solid #8C39CD;
+            border-radius: 0.25em;
+            margin-right: 0.5em;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 50% 50%;
+        }
+        
+        .custom-checkbox:not(:disabled):not(:checked)+label:hover::before {
+            border-color: #b3d7ff;
+        }
+        
+        .custom-checkbox:not(:disabled):active+label::before {
+            background-color: #8C39CD;
+            border-color: #8C39CD;
+        }
+        
+        .custom-checkbox:focus+label::before {
+            box-shadow: 0 0 0 0.2rem #8d39cd4d;
+        }
+        
+        .custom-checkbox:focus:not(:checked)+label::before {
+            border-color: #8C39CD;
+        }
+        
+        .custom-checkbox:checked+label::before {
+            border-color: #8C39CD;
+            background-color: #8C39CD;
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+        }
+        
+        .custom-checkbox:disabled+label::before {
+            background-color: #e9ecef;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container pt20">
+            <div class="navbar df justify-content-between align-items-center">
+                <div class="nav__block df justify-content-between align-items-center">
+                    <div class="nav__block-item col-xl-5">
+                        <h1 class="c-purple font-style-italic">freelance</h1>
+                    </div>
+                    <div class="nav__block-item col-xl-5">
+                        <form class="df p5 pl-10 br-10 b-2 c-purple" action="#">
+                            <input class="p5 b-0 form__input" type="search" name="#" id="#" placeholder="Найти услугу">
+                        </form>
+                    </div>
+                </div>
+                <div class="nav__block df pr60">
+                    <div class="nav__block-item"><button class="mt-5 p5 br-10 pl10 pr10 nav__item-btn c-purple tac bg-tra b-2 bold">Вход</button></div>
+                    <div class="nav__block-item of-1"><button class="mt-5 p5 br-10 pl10 pr10 nav__item-btn purple c-white tac border-purple bold">Регистрация</button></div>
+                    <div class="nav__block-item of-1"><button class="mt-5 p5 br-10 pl10 pr10 nav__item-btn c-purple tac bg-tra b-2 bold">Фрилансеру</button></div>
+                </div>
+            </div>
+            <div class="nav__link container pt20">
+                <ul class="df justify-content-between align-items-center">
+                    <li class="br-right-2 pr10">
+                        <a href="#">Программирование и IT</a>
+                    </li>
+                    <li class="br-right-2 pr10">
+                        <a href="#">Интернет продвижение</a>
+                    </li>
+                    <li class="br-right-2 pr10">
+                        <a href="#">Дизайн</a>
+                    </li>
+                    <li class="br-right-2 pr10">
+                        <a href="#">Архитектура/Интерьер</a>
+                    </li>
+                    <li class="br-right-2 pr10">
+                        <a href="#">Веб разработка</a>
+                    </li>
+                    <li class="br-right-2 pr10">
+                        <a href="#">Переводы</a>
+                    </li>
+                    <li class="br-right-2 pr10">
+                        <a href="#">Арт/Иллюстрации</a>
+                    </li>
+                    <li class="br-right-2 pr10">
+                        <a href="#">Реклама/Маркетинг</a>
+                    </li>
+                </ul>
+                <div class="nav__catalog df pt20 justify-content-between mw-20">
+                    <a class="c-grey" href="#">Главная</a>
+                    <p>/</p>
+                    <p> Каталог фрилансеров</p>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="img__banner info__banner banner mt-20">
+            <div class="container">
+                <div class="banner__intro pt80 pb80">
+                    <h1 class="tac c-white">Каталог фрилансеров</h1>
+                    <p class="tac w-60 mx c-white pt20">Изучайте каталог фрилансеров с примерами работ и отзывами, выбирайте лучших фрилансеров, предлагайте им персональные проекты и работайте в Рабочей области.</p>
+                </div>
+            </div>
+        </section>
+        <section class="filter">
+            <div class="container">
+                <div class="filter__block df flex-row flex-wrap">
+                    <button class="mt-5 filter__btn-item bg-tra c-white b-0 purple br-10 p10 bold fs-16">Веб-разработка</button>
+                    <button class="mt-5 filter__btn-item bg-tra c-white b-0 purple br-10 p10 bold fs-16">Интернет продвижение и реклама</button>
+                    <button class="mt-5 filter__btn-item bg-tra c-white b-0 purple br-10 p10 bold fs-16">Графический дизайн</button>
+                    <button class="mt-5 filter__btn-item bg-tra c-purple b-2 br-10 p10 bold fs-16">3D графика</button>
+                    <button class="mt-5 filter__btn-item bg-tra c-purple b-2 br-10 p10 bold fs-16">Программирование и IT</button>
+                    <button class="mt-5 filter__btn-item bg-tra c-purple b-2 br-10 p10 bold fs-16">Тексты</button>
+                    <button class="mt-5 filter__btn-item bg-tra c-purple b-2 br-10 p10 bold fs-16">Crypto/NFT</button>
+                    <button class="mt-5 filter__btn-item bg-tra c-purple b-2 br-10 p10 bold fs-16">Арт/Иллюстрации</button>
+                    <button class="mt-5 filter__btn-item bg-tra c-purple b-2 br-10 p10 bold fs-16">Архитектура / Интерьер / Экстерьер</button>
+                    <button class="mt-5 filter__btn-item bg-tra c-purple b-2 br-10 p10 bold fs-16">Аутсорсинг / Консалтинг / Менеджмент</button>
+                    <button class="mt-5 filter__btn-item bg-tra c-purple b-2 br-10 p10 bold fs-16">Инженерия</button>
+                    <button class="mt-5 filter__btn-item bg-tra c-purple b-2 br-10 p10 bold fs-16">Классическая реклама и маркетинг</button>
+                    <button class="mt-5 filter__btn-item bg-tra c-purple b-2 br-10 p10 bold fs-16">Музыка / Звук</button>
+                    <button class="mt-5 filter__btn-item bg-tra c-purple b-2 br-10 p10 bold fs-16">Переводы</button>
+                    <button class="mt-5 filter__btn-item bg-tra c-purple b-2 br-10 p10 bold fs-16">Фотография</button>
+                    <button class="mt-5 filter__btn-item bg-tra c-purple b-2 br-10 p10 bold fs-16">Бытовые услуги / Обучение</button>
+                    <button class="mt-5 filter__btn-item bg-tra c-purple b-2 br-10 p10 bold fs-16">Видео</button>
+                </div>
+            </div>
+        </section>
+        <section class="executer mt-20">
+            <div class="container df justify-content-between">
+                <div class="executer__search col-xl-1 mw-30">
+                    <div class="search__form">
+                        <form class="col-12 p5 pl-10 br-10 b-2 c-purple" action="#">
+                            <input class="col-12 p5 b-0 form__input" type="search" name="#" id="#" placeholder="Поиск по фрилансерам">
+                        </form>
+                        <div class="search__categories mt-20">
+                            <form class="col-12 p5 pl-10 br-10 b-2 c-purple" action="#">
+                                <input class="col-12 p5 b-0 form__input" type="name" name="#" id="#" placeholder="Категории" disabled>
+                            </form>
+                        </div>
+                        <div class="search__select">
+                            <div class="checkbox">
+                                <input class="custom-checkbox" type="checkbox" id="color-3" name="color-3" value="С отзывами от заказчиков">
+                                <label for="color-3">С отзывами от заказчиков</label>
+                            </div>
+                            <div class="checkbox">
+                                <input class="custom-checkbox" type="checkbox" id="color-4" name="color-4" value="Были онлайн в течение суток">
+                                <label for="color-4">Были онлайн в течение суток</label>
+                            </div>
+                            <div class="checkbox">
+                                <input class="custom-checkbox" type="checkbox" id="color-5" name="color-5" value="Только верифицированные">
+                                <label for="color-5">Только верифицированные</label>
+                            </div>
+                        </div>
+                        <div class="search__submit df mt-20">
+                            <button class="purple br-10 c-white p10 pl20 pr20 b-0 mx">Применить</button>
+                        </div>
+                        <div class="search__executer-profiles bsh-pr p20 br-10">
+                            <h1 class="fs20 tac">Самые активные</h1>
+                            <div class="mt-20 executer__pr-profile df">
+                                <div class="pr__profile-ava">
+                                    <img src="./img/ava.svg" alt="ava">
+                                </div>
+                                <div class="pr__profile-info pl15">
+                                    <h1 class="fs20">Алексей Бычков</h1>
+                                    <a href="#" class="fs16 c-grey">ak=leltnjvmodmoam</a>
+                                    <p class="fs16 c-purple">120 отзывов</p>
+                                </div>
+                            </div>
+                            <div class="mt-20 executer__pr-profile df">
+                                <div class="pr__profile-ava">
+                                    <img src="./img/ava.svg" alt="ava">
+                                </div>
+                                <div class="pr__profile-info pl15">
+                                    <h1 class="fs20">Алексей Бычков</h1>
+                                    <a href="#" class="fs16 c-grey">ak=leltnjvmodmoam</a>
+                                    <p class="fs16 c-purple">120 отзывов</p>
+                                </div>
+                            </div>
+                            <div class="mt-20 executer__pr-profile df">
+                                <div class="pr__profile-ava">
+                                    <img src="./img/ava.svg" alt="ava">
+                                </div>
+                                <div class="pr__profile-info pl15">
+                                    <h1 class="fs20">Алексей Бычков</h1>
+                                    <a href="#" class="fs16 c-grey">ak=leltnjvmodmoam</a>
+                                    <p class="fs16 c-purple">120 отзывов</p>
+                                </div>
+                            </div>
+                            <div class="mt-20 executer__pr-profile df">
+                                <div class="pr__profile-ava">
+                                    <img src="./img/ava.svg" alt="ava">
+                                </div>
+                                <div class="pr__profile-info pl15">
+                                    <h1 class="fs20">Алексей Бычков</h1>
+                                    <a href="#" class="fs16 c-grey">ak=leltnjvmodmoam</a>
+                                    <p class="fs16 c-purple">120 отзывов</p>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="search__executer-profiles bsh-pr p20 br-10 mt-20">
+                            <h1 class="fs20 tac c-purple">Премиум</h1>
+                            <div class="mt-20 executer__pr-profile df">
+                                <div class="pr__profile-ava">
+                                    <img src="./img/ava.svg" alt="ava">
+                                </div>
+                                <div class="pr__profile-info pl15">
+                                    <h1 class="fs20">Алексей Бычков</h1>
+                                    <a href="#" class="fs16 c-grey">ak=leltnjvmodmoam</a>
+                                    <p class="fs16 c-purple">120 отзывов</p>
+                                </div>
+                            </div>
+                            <div class="mt-20 executer__pr-profile df">
+                                <div class="pr__profile-ava">
+                                    <img src="./img/ava.svg" alt="ava">
+                                </div>
+                                <div class="pr__profile-info pl15">
+                                    <h1 class="fs20">Алексей Бычков</h1>
+                                    <a href="#" class="fs16 c-grey">ak=leltnjvmodmoam</a>
+                                    <p class="fs16 c-purple">120 отзывов</p>
+                                </div>
+                            </div>
+                            <div class="mt-20 executer__pr-profile df">
+                                <div class="pr__profile-ava">
+                                    <img src="./img/ava.svg" alt="ava">
+                                </div>
+                                <div class="pr__profile-info pl15">
+                                    <h1 class="fs20">Алексей Бычков</h1>
+                                    <a href="#" class="fs16 c-grey">ak=leltnjvmodmoam</a>
+                                    <p class="fs16 c-purple">120 отзывов</p>
+                                </div>
+                            </div>
+                            <div class="mt-20 executer__pr-profile df">
+                                <div class="pr__profile-ava">
+                                    <img src="./img/ava.svg" alt="ava">
+                                </div>
+                                <div class="pr__profile-info pl15">
+                                    <h1 class="fs20">Алексей Бычков</h1>
+                                    <a href="#" class="fs16 c-grey">ak=leltnjvmodmoam</a>
+                                    <p class="fs16 c-purple">120 отзывов</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="executer__profile col-xl-11 mw-70">
+                    <div class="executer__profile-item">
+                        <div class="executer__pl-profile bsh-pr p20 br-10">
+                            <div class="executer__pl-img df justify-content-between">
+                                <div class="pl__img">
+                                    <img src="./img/ava.svg" alt="ava">
+                                </div>
+                                <div class="pl__intro pl10">
+                                    <h1 class="fs20">Алексей Бычков</h1>
+                                    <a href="#" class="fs16 c-grey">ak=leltnjvmodmoam</a>
+                                    <div class="pl__buttons">
+                                        <button class="filter__btn-item bg-tra c-purple b-2 br-10 pl5 bold fs-12">Веб разработка</button>
+                                        <button class="filter__btn-item bg-tra c-purple b-2 br-10 pl5 bold fs-12">Графический дизайн</button>
+                                        <button class="filter__btn-item bg-tra c-purple b-2 br-10 pl5 bold fs-12">Интернет-магазины</button>
+                                        <button class="mt-5 filter__btn-item bg-tra c-purple b-2 br-10 pl5 bold fs-12">...</button>
+                                    </div>
+                                    <div class="pl__info-user df justify-content-between">
+                                        <p class="c-grey">Санкт-Петербург</p>
+                                        <p class="c-grey">Работ в портфолио: <span class="c-purple bold">130</span></p>
+                                        <p class="c-grey">Отзывы: <span class="c-purple bold">+120</span></p>
+                                    </div>
+                                </div>
+                                <div class="pl__price">
+                                    <h1 class="c-purple fs20">
+                                        от 500 ₽/час
+                                    </h1>
+                                    <button class="mt-5 filter__btn-item bg-tra c-white b-0 purple br-10 pl20 pr20 pt10 pb10 bold fs-20">Написать</button>
+                                </div>
+                            </div>
+                            <div class="executer__portfolio df justify-content-between mt-20">
+                                <div class="exe__portfolio-card df flex-column w-60 mt-5">
+                                    <img src="./img/cards/work1.svg" alt="work1">
+                                    <a class="tac mt-20" href="#">Разработка сайта "Movchan's Group"</a>
+                                </div>
+                                <div class="exe__portfolio-card df flex-column w-60 mt-5">
+                                    <img src="./img/cards/work2.svg" alt="work1">
+                                    <a class="tac mt-20" href="#">Разработка сайта "Movchan's Group"</a>
+                                </div>
+                                <div class="exe__portfolio-card df flex-column w-60 mt-5">
+                                    <img src="./img/cards/work3.svg" alt="work1">
+                                    <a class="tac mt-20" href="#">Разработка сайта "Movchan's Group"</a>
+                                </div>
+                            </div>
+                            <div class="executer__card-link tar">
+                                <a class="c-purple bold fs16" href="#">Смотреть все</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="executer__profile-item mt-20">
+                        <div class="executer__pl-profile bsh-pr p20 br-10">
+                            <div class="executer__pl-img df justify-content-between">
+                                <div class="pl__img">
+                                    <img src="./img/ava.svg" alt="ava">
+                                </div>
+                                <div class="pl__intro pl10">
+                                    <h1 class="fs20">Алексей Бычков</h1>
+                                    <a href="#" class="fs16 c-grey">ak=leltnjvmodmoam</a>
+                                    <div class="pl__buttons">
+                                        <button class="filter__btn-item bg-tra c-purple b-2 br-10 pl5 bold fs-12">Веб разработка</button>
+                                        <button class="filter__btn-item bg-tra c-purple b-2 br-10 pl5 bold fs-12">Графический дизайн</button>
+                                        <button class="filter__btn-item bg-tra c-purple b-2 br-10 pl5 bold fs-12">Интернет-магазины</button>
+                                        <button class="mt-5 filter__btn-item bg-tra c-purple b-2 br-10 pl5 bold fs-12">...</button>
+                                    </div>
+                                    <div class="pl__info-user df justify-content-between">
+                                        <p class="c-grey">Санкт-Петербург</p>
+                                        <p class="c-grey">Работ в портфолио: <span class="c-purple bold">130</span></p>
+                                        <p class="c-grey">Отзывы: <span class="c-purple bold">+120</span></p>
+                                    </div>
+                                </div>
+                                <div class="pl__price">
+                                    <h1 class="c-purple fs20">
+                                        от 500 ₽/час
+                                    </h1>
+                                    <button class="mt-5 filter__btn-item bg-tra c-white b-0 purple br-10 pl20 pr20 pt10 pb10 bold fs-20">Написать</button>
+                                </div>
+                            </div>
+                            <div class="executer__portfolio df justify-content-between mt-20">
+                                <div class="exe__portfolio-card df flex-column w-60 mt-5">
+                                    <img src="./img/cards/work1.svg" alt="work1">
+                                    <a class="tac mt-20" href="#">Разработка сайта "Movchan's Group"</a>
+                                </div>
+                                <div class="exe__portfolio-card df flex-column w-60 mt-5">
+                                    <img src="./img/cards/work2.svg" alt="work1">
+                                    <a class="tac mt-20" href="#">Разработка сайта "Movchan's Group"</a>
+                                </div>
+                                <div class="exe__portfolio-card df flex-column w-60 mt-5">
+                                    <img src="./img/cards/work3.svg" alt="work1">
+                                    <a class="tac mt-20" href="#">Разработка сайта "Movchan's Group"</a>
+                                </div>
+                            </div>
+                            <div class="executer__card-link tar">
+                                <a class="c-purple bold fs16" href="#">Смотреть все</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="executer__profile-item mt-20">
+                        <div class="executer__pl-profile bsh-pr p20 br-10">
+                            <div class="executer__pl-img df justify-content-between">
+                                <div class="pl__img">
+                                    <img src="./img/ava.svg" alt="ava">
+                                </div>
+                                <div class="pl__intro pl10">
+                                    <h1 class="fs20">Алексей Бычков</h1>
+                                    <a href="#" class="fs16 c-grey">ak=leltnjvmodmoam</a>
+                                    <div class="pl__buttons">
+                                        <button class="filter__btn-item bg-tra c-purple b-2 br-10 pl5 bold fs-12">Веб разработка</button>
+                                        <button class="filter__btn-item bg-tra c-purple b-2 br-10 pl5 bold fs-12">Графический дизайн</button>
+                                        <button class="filter__btn-item bg-tra c-purple b-2 br-10 pl5 bold fs-12">Интернет-магазины</button>
+                                        <button class="mt-5 filter__btn-item bg-tra c-purple b-2 br-10 pl5 bold fs-12">...</button>
+                                    </div>
+                                    <div class="pl__info-user df justify-content-between">
+                                        <p class="c-grey">Санкт-Петербург</p>
+                                        <p class="c-grey">Работ в портфолио: <span class="c-purple bold">130</span></p>
+                                        <p class="c-grey">Отзывы: <span class="c-purple bold">+120</span></p>
+                                    </div>
+                                </div>
+                                <div class="pl__price">
+                                    <h1 class="c-purple fs20">
+                                        от 500 ₽/час
+                                    </h1>
+                                    <button class="mt-5 filter__btn-item bg-tra c-white b-0 purple br-10 pl20 pr20 pt10 pb10 bold fs-20">Написать</button>
+                                </div>
+                            </div>
+                            <div class="executer__portfolio df justify-content-between mt-20">
+                                <div class="exe__portfolio-card df flex-column w-60 mt-5">
+                                    <img src="./img/cards/work1.svg" alt="work1">
+                                    <a class="tac mt-20" href="#">Разработка сайта "Movchan's Group"</a>
+                                </div>
+                                <div class="exe__portfolio-card df flex-column w-60 mt-5">
+                                    <img src="./img/cards/work2.svg" alt="work1">
+                                    <a class="tac mt-20" href="#">Разработка сайта "Movchan's Group"</a>
+                                </div>
+                                <div class="exe__portfolio-card df flex-column w-60 mt-5">
+                                    <img src="./img/cards/work3.svg" alt="work1">
+                                    <a class="tac mt-20" href="#">Разработка сайта "Movchan's Group"</a>
+                                </div>
+                            </div>
+                            <div class="executer__card-link tar">
+                                <a class="c-purple bold fs16" href="#">Смотреть все</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="register pb50">
+            <div class="container">
+                <div class="bsh-pr register__intro register__banner img__banner tac pt80 pb80">
+                    <h1>Хотите стать фрилансером?</h1>
+                    <p>Быстрее регистрируйтесь и находите себе заказы </p>
+                    <button class="mt-5 filter__btn-item bg-tra c-white b-0 purple br-10 p10 bold fs-16">Регистрация</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="mt-20">
+        <hr class="c-purple b-1">
+        <div class="container pt30">
+            <div class="footer__grid df">
+                <div class="footer__block col-xl-3">
+                    <div class="footer__block-item">
+                        <h1 class="c-purple font-style-italic">freelance</h1>
+                        <div class="social__block df mt-20">
+                            <a href="#"><img src="./img/ico/telegram(3).svg" alt="telegram"></a>
+                            <a href="#" class="pl30"><img src="./img/ico/whatsapp(3).svg" alt="whatsapp"></a>
+                            <a href="#" class="pl30"><img src="./img/ico/vk(2).svg" alt="vk"></a>
+                        </div>
+                        <div class="social__email df">
+                            <img src="./img/ico/email.svg" alt="email">
+                            <a class="fs16 p5" href="mailto:support@freelance.net">support@freelance.net</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__block col-xl-3">
+                    <div class="footer__block-item">
+                        <h1 class="fs20">О сервисе</h1>
+                        <ul class="pt10">
+                            <li class="pt10">
+                                <a href="#">О компании</a>
+                            </li>
+                            <li class="pt10">
+                                <a href="#">Контакты</a>
+                            </li>
+                            <li class="pt10">
+                                <a href="#">Отзывы</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer__block col-xl-3">
+                    <div class="footer__block-item">
+                        <h1 class="fs20">Пользователям</h1>
+                        <ul class="pt10">
+                            <li class="pt10">
+                                <a href="#">Тарифы</a>
+                            </li>
+                            <li class="pt10">
+                                <a href="#">Задачи и теги</a>
+                            </li>
+                            <li class="pt10">
+                                <a href="#">Фриланс заказы</a>
+                            </li>
+                            <li class="pt10">
+                                <a href="#">Партнёрские программы</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer__block col-xl-3">
+                    <div class="footer__block-item">
+                        <h1 class="fs20">Помощь</h1>
+                        <ul class="pt10">
+                            <li class="pt10">
+                                <a href="#">Помощь</a>
+                            </li>
+                            <li class="pt10">
+                                <a href="#">Правила сервиса</a>
+                            </li>
+                            <li class="pt10">
+                                <a href="#">Служба поддержки</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="author__item df pt80">
+                <p>© Фриланс, 2020 — 2022</p>
+                <a href="#">Пользовательское соглашение</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
