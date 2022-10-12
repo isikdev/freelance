@@ -1,3 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+body {
+  font-family: "Inter", sans-serif;
+}
+
 .form__input {
   outline: none;
   border: 0px none;
@@ -20,6 +25,10 @@
 
 .c-grey {
   color: #909090;
+}
+
+.br-purple {
+  border: 2px solid #8c39cd;
 }
 
 .br-right-2 {
@@ -54,8 +63,40 @@
   margin: 5px 5px;
 }
 
+.mt-8 {
+  margin-top: 8px;
+}
+
+.mt-16 {
+  margin-top: 16px;
+}
+
 .mt-20 {
   margin: 20px 0px;
+}
+
+.mt-25 {
+  margin-top: 25px;
+}
+
+.mt-40 {
+  margin: 40px 0px;
+}
+
+.mt-48 {
+  margin-top: 48px;
+}
+
+.ml-25 {
+  margin-left: 25px;
+}
+
+.ml-48 {
+  margin-left: 48px;
+}
+
+.p16 {
+  padding: 10px 16px;
 }
 
 .img__banner {
@@ -70,6 +111,7 @@
 
 .register__banner {
   background-image: url("../img/register-banner.svg");
+  border-radius: 10px;
 }
 
 .flex-row {
@@ -86,4 +128,13 @@
 
 .bsh-pr {
   box-shadow: -2px 0px 9px 0px rgba(63, 5, 64, 0.2509803922);
+}
+
+.img-profile-lg {
+  width: 125px;
+  height: 125px;
+}
+
+.wh-nowrap {
+  white-space: nowrap;
 }/*# sourceMappingURL=main.css.map */

@@ -738,6 +738,10 @@ li {
     padding-right: 1px;
 }
 
+.pr5 {
+    padding-right: 5px;
+}
+
 .pr10 {
     padding-right: 10px;
 }
@@ -4331,6 +4335,10 @@ li {
 
 .br-10 {
     border-radius: 10px;
+}
+
+.br-15 {
+    border-radius: 15px;
 }
 
 .br-20 {
