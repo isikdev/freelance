@@ -62,6 +62,18 @@
         .custom-checkbox:disabled+label::before {
             background-color: #e9ecef;
         }
+        
+        .fa {
+            width: 20px;
+            height: 20px;
+            text-align: center;
+            margin-right: 26px;
+            position: relative;
+            z-index: 1;
+            float: right;
+            display: flex;
+            justify-content: right;
+        }
     </style>
 </head>
 
@@ -71,46 +83,31 @@
             <div class="navbar df justify-content-between align-items-center">
                 <div class="nav__block df justify-content-between align-items-center">
                     <div class="nav__block-item col-xl-5">
-                        <h1 class="c-purple font-style-italic">freelance</h1>
+                        <a href="#"><img src="./img/logo.svg" alt="logo"></a>
                     </div>
                     <div class="nav__block-item col-xl-5">
-                        <form class="df p5 pl-10 br-10 b-2 c-purple" action="#">
+                        <form class="df p5 pl-10 br-10 b-2 c-purple align-items-center" action="#">
                             <input class="p5 b-0 form__input" type="search" name="#" id="#" placeholder="Найти услугу">
+                            <img class="fa" src="./img/ico/search.svg" alt="search">
                         </form>
                     </div>
                 </div>
-                <div class="nav__block df justify-content-around pr60">
-                    <div class="nav__block-item"><button class="mt-5 p5 br-20 pt10 pb10 pl40 pr40 nav__item-btn c-purple tac bg-tra b-2 bold">Вход</button></div>
-                    <div class="nav__block-item of-1"><button class="mt-5 p5 br-20 pt10 pb10 pl40 pr40 nav__item-btn purple c-white tac br-purple bold">Регистрация</button></div>
-                    <div class="nav__block-item of-1"><button class="mt-5 p5 br-20 pt10 pb10 pl40 pr40 nav__item-btn c-purple tac bg-tra b-2 bold">Фрилансеру</button></div>
+                <div class="nav__block df pr60">
+                    <div class="nav__block-item"><button class="w-120px br-20 pt10 pb10 nav__item-btn c-purple tac bg-tra b-2 fw600">Вход</button></div>
+                    <div class="nav__block-item of-1"><button class="w-183px br-20 pt10 pb10 nav__item-btn purple c-white tac br-purple fw600">Регистрация</button></div>
+                    <div class="nav__block-item of-1"><button class="w-179px br-20 pt10 pb10 nav__item-btn c-purple tac bg-tra b-2 fw600">Фрилансеру</button></div>
                 </div>
             </div>
             <div class="nav__link container pt20">
-                <ul class="df justify-content-between align-items-center">
-                    <li class="br-right-2 pr5">
-                        <a href="#">Программирование и IT</a>
-                    </li>
-                    <li class="br-right-2 pr5">
-                        <a href="#">Интернет продвижение</a>
-                    </li>
-                    <li class="br-right-2 pr5">
-                        <a href="#">Дизайн</a>
-                    </li>
-                    <li class="br-right-2 pr5">
-                        <a href="#">Архитектура/Интерьер</a>
-                    </li>
-                    <li class="br-right-2 pr5">
-                        <a href="#">Веб разработка</a>
-                    </li>
-                    <li class="br-right-2 pr5">
-                        <a href="#">Переводы</a>
-                    </li>
-                    <li class="br-right-2 pr5">
-                        <a href="#">Арт/Иллюстрации</a>
-                    </li>
-                    <li class="br-right-2 pr5">
-                        <a href="#">Реклама/Маркетинг</a>
-                    </li>
+                <ul class="df justify-content-between align-items-center align-self-center">
+                    <li class="df align-items-center fs16 br-right-1 p4 tac h28"><a href="#">Программирование и IT</a></li>
+                    <li class="df align-items-center fs16 br-right-1 p4 tac h28"><a href="#">Интернет продвижение</a></li>
+                    <li class="df align-items-center fs16 br-right-1 p4 tac h28"><a href="#">Дизайн</a></li>
+                    <li class="df align-items-center fs16 br-right-1 p4 tac h28"><a href="#">Архитектура/Интерьер</a></li>
+                    <li class="df align-items-center fs16 br-right-1 p4 tac h28"><a href="#">Веб разработка</a></li>
+                    <li class="df align-items-center fs16 br-right-1 p4 tac h28"><a href="#">Переводы</a></li>
+                    <li class="df align-items-center fs16 br-right-1 p4 tac h28"><a href="#">Арт/Иллюстрации</a></li>
+                    <li class="df align-items-center fs16 br-right-1 p4 tac h28"><a href="#">Реклама/Маркетинг</a></li>
                 </ul>
                 <div class="nav__catalog df pt20">
                     <a class="c-grey" href="#">Главная</a>
@@ -124,8 +121,8 @@
         <section class="img__banner info__banner banner mt-20">
             <div class="container">
                 <div class="banner__intro pt80 pb80">
-                    <h1 class="tac c-white">Каталог фрилансеров</h1>
-                    <p class="tac w-60 mx c-white pt20">Изучайте каталог фрилансеров с примерами работ и отзывами, выбирайте лучших фрилансеров, предлагайте им персональные проекты и работайте в Рабочей области.</p>
+                    <h1 class="tac c-white fs48">Каталог фрилансеров</h1>
+                    <p class="tac w-60 mx c-white pt20 fs24">Изучайте каталог фрилансеров с примерами работ и отзывами, выбирайте лучших фрилансеров, предлагайте им персональные проекты и работайте в Рабочей области.</p>
                 </div>
             </div>
         </section>
@@ -153,15 +150,15 @@
             </div>
         </section>
         <section class="executer mt-48">
-            <div class="container df justify-content-between">
-                <div class="executer__search col-xl-1 mw-30">
+            <div class="container df">
+                <div class="executer__search col-xl-1 mw-309">
                     <div class="search__form">
-                        <form class="col-12 p5 pl-10 br-10 b-2 c-purple" action="#">
-                            <input class="col-12 p5 b-0 form__input" type="search" name="#" id="#" placeholder="Поиск по фрилансерам">
+                        <form class="df p5 pl-10 br-10 b-2 c-purple align-items-center" action="#">
+                            <input class="w-100 p5 b-0 form__input" type="search" name="#" id="#" placeholder="Поиск по фрилансерам">
                         </form>
                         <div class="search__categories mt-20">
                             <form class="col-12 p5 pl-10 br-10 b-2 c-purple" action="#">
-                                <input class="col-12 p5 b-0 form__input" type="name" name="#" id="#" placeholder="Категории" disabled>
+                                <input class="col-12 p5 b-0 form__input bg-tra" type="name" name="#" id="#" placeholder="Категории" disabled>
                             </form>
                         </div>
                         <div class="search__select">
@@ -188,7 +185,7 @@
                                     <img src="./img/ava.svg" alt="ava">
                                 </div>
                                 <div class="pr__profile-info pl15">
-                                    <h1 class="fs20">Алексей Бычков</h1>
+                                    <h1 class="fw600 fs18">Алексей Бычков</h1>
                                     <a href="#" class="fs16 c-grey">ak=leltnjvmodmoam</a>
                                     <p class="fs16 c-purple">120 отзывов</p>
                                 </div>
@@ -198,7 +195,7 @@
                                     <img src="./img/ava.svg" alt="ava">
                                 </div>
                                 <div class="pr__profile-info pl15">
-                                    <h1 class="fs20">Алексей Бычков</h1>
+                                    <h1 class="fw600 fs18">Алексей Бычков</h1>
                                     <a href="#" class="fs16 c-grey">ak=leltnjvmodmoam</a>
                                     <p class="fs16 c-purple">120 отзывов</p>
                                 </div>
@@ -208,7 +205,7 @@
                                     <img src="./img/ava.svg" alt="ava">
                                 </div>
                                 <div class="pr__profile-info pl15">
-                                    <h1 class="fs20">Алексей Бычков</h1>
+                                    <h1 class="fw600 fs18">Алексей Бычков</h1>
                                     <a href="#" class="fs16 c-grey">ak=leltnjvmodmoam</a>
                                     <p class="fs16 c-purple">120 отзывов</p>
                                 </div>
@@ -218,7 +215,7 @@
                                     <img src="./img/ava.svg" alt="ava">
                                 </div>
                                 <div class="pr__profile-info pl15">
-                                    <h1 class="fs20">Алексей Бычков</h1>
+                                    <h1 class="fw600 fs18">Алексей Бычков</h1>
                                     <a href="#" class="fs16 c-grey">ak=leltnjvmodmoam</a>
                                     <p class="fs16 c-purple">120 отзывов</p>
                                 </div>
@@ -232,7 +229,7 @@
                                     <img src="./img/ava.svg" alt="ava">
                                 </div>
                                 <div class="pr__profile-info pl15">
-                                    <h1 class="fs20">Алексей Бычков</h1>
+                                    <h1 class="fw600 fs18">Алексей Бычков</h1>
                                     <a href="#" class="fs16 c-grey">ak=leltnjvmodmoam</a>
                                     <p class="fs16 c-purple">120 отзывов</p>
                                 </div>
@@ -242,7 +239,7 @@
                                     <img src="./img/ava.svg" alt="ava">
                                 </div>
                                 <div class="pr__profile-info pl15">
-                                    <h1 class="fs20">Алексей Бычков</h1>
+                                    <h1 class="fw600 fs18">Алексей Бычков</h1>
                                     <a href="#" class="fs16 c-grey">ak=leltnjvmodmoam</a>
                                     <p class="fs16 c-purple">120 отзывов</p>
                                 </div>
@@ -252,7 +249,7 @@
                                     <img src="./img/ava.svg" alt="ava">
                                 </div>
                                 <div class="pr__profile-info pl15">
-                                    <h1 class="fs20">Алексей Бычков</h1>
+                                    <h1 class="fw600 fs18">Алексей Бычков</h1>
                                     <a href="#" class="fs16 c-grey">ak=leltnjvmodmoam</a>
                                     <p class="fs16 c-purple">120 отзывов</p>
                                 </div>
@@ -262,7 +259,7 @@
                                     <img src="./img/ava.svg" alt="ava">
                                 </div>
                                 <div class="pr__profile-info pl15">
-                                    <h1 class="fs20">Алексей Бычков</h1>
+                                    <h1 class="fw600 fs18">Алексей Бычков</h1>
                                     <a href="#" class="fs16 c-grey">ak=leltnjvmodmoam</a>
                                     <p class="fs16 c-purple">120 отзывов</p>
                                 </div>
@@ -271,20 +268,20 @@
                         </div>
                     </div>
                 </div>
-                <div class="executer__profile col-xl-11 mw-70 ml-48">
+                <div class="executer__profile col-xl-11 mw-70 ml-38">
                     <div class="executer__profile-item">
                         <div class="executer__pl-profile bsh-pr p20 br-10">
-                            <div class="executer__pl-img df justify-content-between">
+                            <div class="executer__pl-img df justify-content-between align-items-center">
                                 <div class="pl__img">
                                     <img class="img-profile-lg" src="./img/ava.svg" alt="ava">
                                 </div>
-                                <div class="pl__intro pl10">
-                                    <h1 class="fs20">Алексей Бычков</h1>
-                                    <a href="#" class="fs16 c-grey">ak=leltnjvmodmoam</a>
+                                <div class="pl__intro pl20">
+                                    <h1 class="fs20 fw600">Алексей Бычков</h1>
+                                    <a href="#" class="fs16 fw400 c-grey">ak=leltnjvmodmoam</a>
                                     <div class="pl__buttons">
-                                        <button class="filter__btn-item bg-tra c-purple b-2 br-10 pl5 bold fs-12">Веб разработка</button>
-                                        <button class="filter__btn-item bg-tra c-purple b-2 br-10 pl5 bold fs-12">Графический дизайн</button>
-                                        <button class="filter__btn-item bg-tra c-purple b-2 br-10 pl5 bold fs-12">Интернет-магазины</button>
+                                        <button class="filter__btn-item bg-tra c-purple b-2 br-10 pl5 fw400 fs-12">Веб разработка</button>
+                                        <button class="filter__btn-item bg-tra c-purple b-2 br-10 pl5 fw400 fs-12">Графический дизайн</button>
+                                        <button class="filter__btn-item bg-tra c-purple b-2 br-10 pl5 fw400 fs-12">Интернет-магазины</button>
                                         <button class="mt-5 filter__btn-item bg-tra c-purple b-2 br-15 pl5 bold fs-12">...</button>
                                     </div>
                                     <div class="pl__info-user df justify-content-between">
@@ -294,24 +291,24 @@
                                     </div>
                                 </div>
                                 <div class="pl__price pl10">
-                                    <h1 class="c-purple fs20 wh-nowrap tar">
+                                    <h1 class="c-purple fs20 wh-nowrap tar fw600">
                                         от 500 ₽/час
                                     </h1>
-                                    <button class="mt-20 filter__btn-item bg-tra c-white b-0 purple br-15 pl40 pr40 pt10 pb10 bold fs-20">Написать</button>
+                                    <button class="fw600 mt-20 filter__btn-item bg-tra c-white b-0 purple br-15 pl40 pr40 pt10 pb10 bold fs-20">Написать</button>
                                 </div>
                             </div>
                             <div class="executer__portfolio df justify-content-between mt-25">
                                 <div class="exe__portfolio-card df flex-column w-60 mt-5">
                                     <img src="./img/cards/work1.svg" alt="work1">
-                                    <a class="tac mt-8" href="#">Разработка сайта "Movchan's Group"</a>
+                                    <a class="fs16 tac mt-8" href="#">Разработка сайта "Movchan's Group"</a>
                                 </div>
                                 <div class="exe__portfolio-card df flex-column w-60 mt-5">
                                     <img src="./img/cards/work2.svg" alt="work1">
-                                    <a class="tac mt-8" href="#">Разработка сайта "Movchan's Group"</a>
+                                    <a class="fs16 tac mt-8" href="#">Разработка сайта "Movchan's Group"</a>
                                 </div>
                                 <div class="exe__portfolio-card df flex-column w-60 mt-5">
                                     <img src="./img/cards/work3.svg" alt="work1">
-                                    <a class="tac mt-8" href="#">Разработка сайта "Movchan's Group"</a>
+                                    <a class="fs16 tac mt-8" href="#">Разработка сайта "Movchan's Group"</a>
                                 </div>
                             </div>
                             <div class="executer__card-link tar mt-25">
